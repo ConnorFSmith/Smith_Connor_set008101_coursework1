@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rot1</title>
+</head>
+
+<body>
+	<center><H1>Do you even Ciph bro?</H1></center>
+	<br />
+	<center>
+	<a href="index.html">Home |</a>
+	<a href="design.html">Design |</a>
+	<a href="rot1.html">Rot1</a>
+	</center>
+	<br />
+	<br />
+	<center>Have fun doing this riddle</center>
+	<center>J gmz xjuipvu xjoht, J dsz xjuipvu fzft. Xibu bn J?</center>
+	<br />	
+	<center>dmpvet</center>
+	
+<center><script type="text/javascript">
+function cipherCode(keyIn, keyOut, msg) {
+    var result = "";
+    var add = function(ch) { result += (keyIn.indexOf(ch)==-1) ? ch : keyOut[keyIn.indexOf(ch)]; }
+    for (var i = 0; i < msg.length; i++) { add(msg[i]); }
+    return result;
+}
+ 
+var k1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+var k2 = "BCDEFGHIJKLMNOPQRSTUVWXYZAbcdefghijklmnopqrstuvwxyza";
+function encode(message) { cipherForm.message.value = cipherCode(k1, k2, message); }
+function decode(message) { cipherForm.message.value = cipherCode(k2, k1, message); }
+</script>
+</head>
+<body>
+<form name="cipherForm">
+<textarea name="message" cols="50" rows="7"></textarea><br />
+<input type="button" value="Encode" onclick="encode(cipherForm.message.value);" />
+<input type="button" value="Decode" onclick="decode(cipherForm.message.value);" />
+</form>
+</body>
+</html>
